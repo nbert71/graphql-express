@@ -11,11 +11,6 @@ const express = require('express');
 const app = express()
 const port = process.env.NODE_PORT
 
-
-
-
-
-
 const UserType = new GraphQLObjectType({
     name: "User",
     fields: () => ({
@@ -136,20 +131,6 @@ app.use('/api', graphqlHTTP({
     schema,
     graphiql: true
 }))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 app.get('/', (req, res) => {
     res.send('Hello world !')
